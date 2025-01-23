@@ -39,6 +39,24 @@
         };
     };
 
+    macros {
+        ctrl_plus_left: ctrl_plus_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press>, <&kp LC(LEFT)>;
+
+            label = "CTRL_PLUS_LEFT";
+        };
+
+        ctrl_plus_right: ctrl_plus_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press>, <&kp LC(RIGHT)>;
+
+            label = "CTRL_PLUS_RIGHT";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -156,11 +174,11 @@
 
         arrows {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans        &trans    &trans         &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &kp LA(LEFT)  &kp UP    &kp LA(RIGHT)  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &kp LEFT      &kp DOWN  &kp RIGHT      &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &kp HOME      &trans    &kp END        &trans  &trans
-                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans        &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &ctrl_plus_left  &trans    &ctrl_plus_right  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &kp LA(LEFT)     &kp UP    &kp LA(RIGHT)     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &kp LEFT         &kp DOWN  &kp RIGHT         &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &kp HOME         &trans    &kp END           &trans  &trans
+                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans           &trans    &trans
             >;
         };
     };
