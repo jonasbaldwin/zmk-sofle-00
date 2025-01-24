@@ -37,6 +37,12 @@
 
             hold-trigger-key-positions = <25>;
         };
+
+        mkp: mkp {
+            compatible = "zmk,behavior-mouse-key-press";
+            label = "MKP";
+            #binding-cells = <1>;
+        };
     };
 
     macros {
@@ -169,6 +175,16 @@
 &trans  &trans  &trans  &trans  &trans  &trans                    &kp F20  &kp F1   &kp F2   &kp F3   &kp F12  &kp F16
 &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp F21  &kp F10  &kp F11  &kp F12  &kp F13  &kp F17
                 &trans  &trans  &trans  &trans  &trans    &trans  &trans   &trans   &trans   &trans
+            >;
+        };
+
+        mouse {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
