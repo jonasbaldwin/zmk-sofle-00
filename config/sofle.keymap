@@ -18,6 +18,12 @@
 #define RAISE 2
 #define ADJUST 3
 
+&mmv {
+};
+
+&msc {
+};
+
 / {
     // Activate ADJUST layer by pressing raise and lower
 
@@ -39,21 +45,6 @@
             bindings = <&mo>, <&kp>;
 
             hold-trigger-key-positions = <25>;
-        };
-
-        mkp: mkp {
-            compatible = "zmk,behavior-mouse-key-press";
-            label = "MKP";
-            #binding-cells = <1>;
-        };
-
-        mmv: mmv {
-            compatible = "zmk,behavior-input-two-axis";
-            label = "MMV";
-            #binding-cells = <1>;
-            x-input-code = <0>;
-            y-input-code = <1>;
-            time-to-max-speed-ms = <200>;
         };
     };
 
