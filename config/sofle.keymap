@@ -8,6 +8,9 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
 #define BASE 0
@@ -80,8 +83,8 @@
 &kp GRAVE  &kp N1   &kp N2            &kp N3    &kp N4         &kp N5                           &kp N6  &kp N7          &kp N8     &kp N9             &kp N0    &kp BACKSPACE
 &kp ESC    &kp Q    &kp W             &kp E     &kp R          &kp T                            &kp Y   &kp U           &kp I      &kp O              &kp P     &kp DOUBLE_QUOTES
 &kp TAB    &ht 2 A  &ht 5 S           &ht 4 D   &ht 6 F        &kp G                            &kp H   &kp J           &kp K      &ht 3 L            &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z    &kp X             &kp C     &ht 0 V        &kp B   &kp C_MUTE    &none      &kp N   &kp M           &kp COMMA  &kp DOT            &kp FSLH  &kp RSHFT
-                    &kp LEFT_CONTROL  &kp LALT  &kp LEFT_META  &to 1   &kp RET       &kp SPACE  &to 2   &kp RIGHT_META  &kp RALT   &kp RIGHT_CONTROL
+&kp LSHFT  &kp Z    &kp X             &kp C     &ht 7 V        &kp B   &kp C_MUTE    &none      &kp N   &kp M           &kp COMMA  &kp DOT            &kp FSLH  &kp RSHFT
+                    &kp LEFT_CONTROL  &kp LALT  &kp LEFT_META  &to 3   &kp RET       &kp SPACE  &to 2   &kp RIGHT_META  &kp RALT   &kp RIGHT_CONTROL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -175,6 +178,16 @@
 &trans  &trans  &trans  &trans  &trans  &trans                    &kp F20  &kp F1   &kp F2   &kp F3   &kp F12  &kp F16
 &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp F21  &kp F10  &kp F11  &kp F12  &kp F13  &kp F17
                 &trans  &trans  &trans  &trans  &trans    &trans  &trans   &trans   &trans   &trans
+            >;
+        };
+
+        mouse {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans          &trans          &trans           &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &mkp MB1        &mmv MOVE_UP    &mkp MB2         &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &msc SCRL_LEFT  &msc SCRL_UP    &msc SCRL_DOWN  &msc SCRL_RIGHT  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans    &trans  &trans          &trans          &trans          &trans
             >;
         };
     };
