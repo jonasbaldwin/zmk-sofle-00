@@ -15,6 +15,12 @@
 #define RAISE 2
 #define ADJUST 3
 
+&mmv {
+};
+
+&msc {
+};
+
 / {
     // Activate ADJUST layer by pressing raise and lower
 
